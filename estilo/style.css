@@ -1,0 +1,218 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face { /*Regra para adicionar uma fonte */
+    font-family: 'Android'; /*Nome para a fonte */
+    /*Para chamar a fonte depois de src: url  ('../ que ela aparecera (fonte salva no pc)*/
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal; /*Peso da fonte*/
+}
+
+:root { /*Rais da arvore do documento*/
+    /*Variaveis globais de cor e fonte  */
+    --cor0: #0a89a68a; 
+    --cor1: #0A7373;
+    --cor2: #A69649;
+    --cor3: #d9a03662;
+    --cor4: #D9863D;
+
+    --fonte-pabrao:  Arial, Verdana, Helvetica, sans-serif ;
+    --fonte-destaque: 'Bebas Neue';
+    --fonte-android: 'Android';
+}
+
+* { /*Configurção Global das css*/
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+body {
+    background-color: var(--cor3);
+    font-size: var(--fonte-pabrao);
+}
+
+a.externo::after { /*Todo o link que for da classe externo eu vou colocar depois dele */
+    content: '\00A0\1F517'; /*Simbolo de corrente*/
+
+}
+
+header { /*Cabeçalho*/
+    /*deixar a caixa do cabeçalho em cor linear vai do 0 ao 4*/
+    background-image: linear-gradient(to bottom, var(--cor0), var(--cor4)); 
+    min-height: 150px; /*Altura minima*/
+    text-align: center; /* texto no centro */
+    padding-top: 40px; /*Espaçamento interno acima*/
+}
+
+header > h1 { /*Todo h1 que estiver dentro de header*/
+    /*Configurações de h1*/
+    color: white;
+    font-family: var(--fonte-destaque); 
+    font-size: 3em; /*Tamanho da fonte */
+    font-weight: normal; /*peso da fonte */
+    margin-bottom: 20px; /*Margem abaixo */
+    text-shadow: 2px 2px 4px black; /*Sombra no titulo*/
+    
+}
+
+header > p { /*Todo paragrafo que estiver dentro de header*/
+    font-family: var(--fonte-pabrao);
+    font-size: 1.2em;
+    color: white;
+    max-width: 500px; /*Maximo de largura */
+    padding-right: 10px; /*espaçamento interno a direita*/
+    padding-left: 10px; /*espaçamento interno a esquerda*/
+    margin: auto;
+   padding-bottom: 10px;/*Margem interna */
+    text-shadow: 2px 2px 4px black; /*Sombra no titulo*/
+
+}
+
+nav { /*Caixa de links*/
+    background-color: var(--cor4);
+    padding: 10px; /*Espaçamento interno*/
+    box-shadow: 2px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+nav > a {
+    color: rgb(70, 32, 32);
+    padding: 10px; /*Margem interna para distanciar um do outro */
+    border-radius: 5px; /*Borda redonda no link*/
+    text-decoration: none; /*texto decorado não para perder o sublinhado*/
+    font-weight: bold; /*peso da fonte negrito*/
+    transition-duration: .5s; /*Tempo de duração do mouse em cima*/
+
+}
+
+nav > a:hover {
+  background-color: var(--cor3);
+  color: var(--cor1);
+}
+
+main { /*Caixa principal*/
+    min-height: 300px; /*Largura minima do site */
+    max-width: 1000px; /*Largura maxima do site*/
+    margin: auto;/*para não crecer em telas muito grandes*/
+    margin-bottom: 30px; /*margem embaixo */
+    background-color: white;
+    padding: 20px; /*criando espaçamento interno */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);/*Sombra apenas nas laterais */
+    border-bottom-left-radius: 10px; /*Embaixo esquerda*/
+    border-bottom-right-radius: 10px; /*Embaixo direita*/
+}
+
+main h1 {
+    color: var(--cor1); /*cor da fonte */
+    font-family: var(--fonte-android); /*familia da fonte*/
+    font-weight: normal; /*Peso da fonte */
+    font-size: 1.8em; /*Tamaho da fonte*/
+
+}
+
+main h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor2);
+    font-size: 1.3em; /*Tamanho da fonte */
+    font-weight: normal; /*Peso da fonte */
+    /*Começa em cor e fica transparente */
+    background-image: linear-gradient( to right, var(--cor0), transparent);
+    text-indent: 10px; /*espaçamento frontal do paragrafo*/
+}
+
+main p { /*paragrafos que estão dentro de main */
+    margin: 15px 0px; 
+    text-align: justify;
+    text-indent: 30px; /*Gera um espaço na primeira linha do paragrafo*/
+    font-size: 1em; /*Tamanho da fonte*/
+    line-height: 2em; /*Tamanho do espaçamento entre as linhas */
+}
+
+main strong { /*Todo o texto em negrito*/
+    color: var(--cor1);
+    font-weight: bold;
+    
+}
+
+main a { /*Todo o link dentro de main*/
+ text-decoration:  none; /*Nao tera decoração*/
+ font-weight: bold; /*Peso da fonte*/
+ background-color: var(--cor0); /*cor de fundo*/
+ padding: 2px 6px; /*Espaçamento interno*/
+}
+
+main a:hover  {/*Quando eu passar o mouse por cima dos links*/
+    text-decoration: underline; /*tera um traço por baixo*/
+    color: var(--cor1); /*Tera esta cor*/
+
+}
+
+main img {
+    width: 100%; /*isso faz com que as imagens se espreman e se adapitem*/
+}
+
+/*Chamando a classe que foi aplicada na imagem */
+main img.pequena { 
+    max-width: 350px; /*Tamanho maximo de largura*/
+    display: block; /*Transforma a imagem em um block*/
+    margin: auto; /*para poder centralizala*/
+}
+
+div.video { /*Os videos da classe div */
+    background-color: var(--cor4);
+    margin: 0px -20px 30px -20px ; /*Margem do video*/
+    padding: 20px; /*Margem Interna*/
+    padding-bottom: 57%;
+    position: relative; /*posição do video */
+}
+
+/*Os iframe que estão dentro da casse video */
+div.video > iframe {
+    position: absolute;/*Posição do video */
+    top: 5%; /*Distancia de cima do video */
+    left: 5%; /*Distancia da esquerda do video */
+    width: 90%; /*Largura do video*/
+    height: 90%; /*altua do video */
+}
+
+aside { /*Conteudo periferico*/
+    background-color: var(--cor0);
+    padding: 10px; /*Margem interna*/
+    border-radius: 10px; /*Bordas redondas*/
+    box-shadow: 3px 3px 8px #00000054;
+}  
+
+aside > h3 { /* O titulo dentro de aside */
+    background-color: var(--cor1);
+    color: white;
+    padding: 10px; /*Margem interna*/
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px ;
+}
+
+aside > ul { /*As listas não ordenadas */
+    /*estilo para alterar o simbolo da frente da lista*/
+    list-style-type: '\1F5F8\00A0\00A0'; /*\00A0 espaço sem quebra (este codigo não é compativel com todos os navegadores)*/
+    list-style-position: inside; /*A posição da lista sera interna*/
+    columns: 2; /*Divisão de 2 colunas a lista*/
+
+}
+
+footer {
+    background-color: var(--cor1);
+    color: white;
+    text-align: center;
+    font-size: 0.8em; /*Tamanho fonte*/
+    padding: 5px; /*Margem interna*/
+}
+
+footer > p > a { /*Todo link que estiver dentro do paragrafo de footer*/
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover { /*Todo o link que estiver dentro de footer */
+    text-decoration:  underline; /*ficara com traçado */
+    color: var(--cor4);
+}
