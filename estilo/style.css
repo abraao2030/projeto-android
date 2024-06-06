@@ -64,7 +64,7 @@ header > p { /*Todo paragrafo que estiver dentro de header*/
     padding-right: 10px; /*espaçamento interno a direita*/
     padding-left: 10px; /*espaçamento interno a esquerda*/
     margin: auto;
-   padding-bottom: 10px;/*Margem interna */
+    padding-bottom: 10px;/*Margem interna */
     text-shadow: 2px 2px 4px black; /*Sombra no titulo*/
 
 }
